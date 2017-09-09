@@ -12,14 +12,14 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class RestTemplateConfig {
 
-    @Value("${api.streaming-content.timeout.connect}")
+    @Value("${content-data.download.timeout.connect}")
     private int streamingContentApiConnectTimeout;
 
-    @Value("${api.streaming-content.timeout.read}")
+    @Value("${content-data.download.timeout.read}")
     private int streamingContentApiReadTimeout;
 
     @Bean
-    public RestTemplate streamingContentAPIClient(){
+    public RestTemplate contentDataAPIClient(){
         HttpComponentsClientHttpRequestFactory clientRequestFactory = new HttpComponentsClientHttpRequestFactory();
         clientRequestFactory.setConnectTimeout(streamingContentApiConnectTimeout);
         clientRequestFactory.setReadTimeout(streamingContentApiReadTimeout);

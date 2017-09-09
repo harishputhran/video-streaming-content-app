@@ -1,11 +1,12 @@
 package com.harish.streaming.content.service;
 
+import com.harish.streaming.content.api.response.StreamingContentResponse;
 import com.harish.streaming.content.enumeration.ContentClassification;
 import com.harish.streaming.content.enumeration.ContentFilter;
+import com.harish.streaming.content.exception.ContentNotFoundException;
+import com.harish.streaming.content.exception.ContentProcessException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.io.IOException;
 
 /**
  * Created by Harish Puthran on 09/09/17.
@@ -14,13 +15,9 @@ import java.io.IOException;
 public class ContentFilterService {
 
     @Autowired
-    private StreamingContentService contentService;
+    private ContentDataService contentService;
 
-    public void filterContentData(ContentFilter filter, ContentClassification contentType){
-        try {
-            contentService.getContentData();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public StreamingContentResponse filterContentData(ContentFilter filter, ContentClassification contentType) throws ContentProcessException, ContentNotFoundException {
+           return contentService.getContentData();
     }
 }

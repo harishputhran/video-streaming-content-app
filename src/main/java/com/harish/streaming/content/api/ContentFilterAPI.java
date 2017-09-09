@@ -17,7 +17,7 @@ import static org.springframework.http.HttpStatus.OK;
  * Created by Harish Puthran on 09/09/17.
  */
 @RequestMapping(path="/media", produces = APPLICATION_JSON_VALUE)
-public interface StreamingContentFilterAPI {
+public interface ContentFilterAPI {
 
     /**
      * Method to retrieve the Streaming Content based on the following query parameters:
@@ -30,5 +30,5 @@ public interface StreamingContentFilterAPI {
     @GetMapping
     @ResponseStatus(OK)
     @ExceptionHandler(value = {ContentNotFoundException.class, ContentProcessException.class})
-    StreamingContentResponse getStreamingContent(ContentFilterCriteria filterCriteria);
+    StreamingContentResponse getStreamingContent(ContentFilterCriteria filterCriteria) throws ContentProcessException, ContentNotFoundException;
 }

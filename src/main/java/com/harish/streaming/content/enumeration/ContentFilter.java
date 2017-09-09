@@ -5,6 +5,5 @@ package com.harish.streaming.content.enumeration;
  * The class contains the Filter information.
  */
 public enum ContentFilter {
-
     censoring
 }

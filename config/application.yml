@@ -2,21 +2,27 @@ server:
   port: 8181
 
 
-api:
-  streaming-content:
-     url: http://bit.ly/javaassignmentsrc
+content-location:
+  url: http://bit.ly/javaassignmentsrc
+  timeout:
+     connect: 100
+     read: 500
+content-data:
+  download:
+     url: https://drive.google.com/uc?
      timeout:
-       connect: 100
-       read: 500
-  content-data:
-     download:
-       url: https://drive.google.com/uc?
-       timeout:
-         connect: 100
-         read: 5000
+        connect: 500
+        read: 10000
 
 guid:
   prefix:
     censored-media: C
+
+error:
+  message:
+    validation: Invalid Selection
+    apiInvocation:
+    contentDataProcess:
+
 
 

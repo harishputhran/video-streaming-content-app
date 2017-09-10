@@ -6,6 +6,7 @@ import com.harish.streaming.content.validators.ValidateEnum;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.validation.GroupSequence;
 
@@ -16,6 +17,7 @@ import javax.validation.GroupSequence;
 @Setter
 @NoArgsConstructor
 @GroupSequence(value = {ContentFilterCriteria.class})
+@ToString
 public class ContentFilterCriteria {
 
     @ValidateEnum(enumClass=ContentFilter.class, message = "Invalid Content Data Filter provided.", valueExpected = "censoring")

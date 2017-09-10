@@ -2,10 +2,7 @@ package com.harish.streaming.content.api.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.harish.streaming.content.enumeration.AvailabilityState;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +11,8 @@ import java.util.List;
 @Setter
 @Builder
 @AllArgsConstructor
+@ToString(of = {"id","guid"})
+@EqualsAndHashCode(of = {"id","guid","contents","availabilityState"})
 public class Medium {
     private String id;
     private String title;
@@ -27,5 +26,4 @@ public class Medium {
     private List<Content> contents = new ArrayList();
     private String restrictionId;
     private AvailabilityState availabilityState;
-
 }

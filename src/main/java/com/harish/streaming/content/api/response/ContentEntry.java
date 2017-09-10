@@ -13,8 +13,9 @@ import java.util.Map;
 @Setter
 @AllArgsConstructor
 @Builder
+@EqualsAndHashCode(of={"id","guid","title","media","peg$contentClassification"})
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Entry {
+public class ContentEntry {
     private String id;
     private String guid;
     private long updated;
@@ -70,4 +71,11 @@ public class Entry {
     private String peg$productCode;
     private String peg$programMediaAvailability;
     private String peg$testDefaultValue;
+
+    public String toString(){
+        return new StringBuilder().append("CONTENT CLASSIFICATION : ").append(peg$contentClassification)
+                .append("- MEDIA COUNT:").append(media.size())
+                .append("MEDIA :").append(media)
+                .toString();
+    }
 }

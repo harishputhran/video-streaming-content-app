@@ -1,16 +1,12 @@
 package com.harish.streaming.content.exception;
 
 import lombok.Getter;
-import org.springframework.web.bind.annotation.ResponseStatus;
-
-import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 
 /**
  * Created by Harish Puthran on 09/09/17.
  *
  */
-@ResponseStatus(INTERNAL_SERVER_ERROR)
-public class ContentProcessException extends Exception {
+public class ContentProcessException extends RuntimeException {
 
   @Getter private String message;
 

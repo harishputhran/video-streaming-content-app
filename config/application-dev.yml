@@ -1,0 +1,21 @@
+content-location:
+  url: http://bit.ly/javaassignmentsrc
+  timeout:
+     connect: 100
+     read: 1000
+
+content-data:
+  download:
+     url: https://drive.google.com/uc?id={fileId}
+     timeout:
+        connect: 300
+        read: 3000
+
+cache:
+  entries: 50
+  expiry:
+    value: 60
+    unit: SECONDS
+
+
+

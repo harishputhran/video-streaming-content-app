@@ -1,0 +1,21 @@
+content-location:
+  url: http://localhost:8080/javaassignmentsrc
+  timeout:
+     connect: 100
+     read: 1000
+
+content-data:
+  download:
+     url: http://localhost:8080/uc?id={fileId}
+     timeout:
+        connect: 300
+        read: 3000
+
+cache:
+  entries: 0
+  expiry:
+    value: 1
+    unit: SECONDS
+
+
+

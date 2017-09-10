@@ -19,7 +19,9 @@ import java.util.Map;
 @AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class StreamingContentResponse {
+@ToString(of = {"title","entries"})
+@EqualsAndHashCode(of = {"namespace","title","entries"})
+public class ContentData {
 
     @JsonProperty("$xmlns")
     private Map<String, String> namespaces = new HashMap<>();
@@ -27,6 +29,6 @@ public class StreamingContentResponse {
     private long itemsPerPage;
     private long entryCount;
     private String title;
-    private List<Entry> entries = new ArrayList();
+    private List<ContentEntry> entries = new ArrayList();
 
 }

@@ -6,6 +6,5 @@ package com.harish.streaming.content.enumeration;
  *
  */
 public enum ContentClassification {
-
     censored, uncensored
 }

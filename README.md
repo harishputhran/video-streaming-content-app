@@ -33,8 +33,8 @@ Java : JDK 8
 
 Libraries Used in the Assignment:
 1. SPRING BOOT:
-   Spring Boot is used to create REST APIs and packaging of the application as a fat jar. This is helpful as it is a self-contained application including an Embedded Jetty server which can be used to start the application without the need of an external server.
-   Also, Spring Boot helps in reducing the conflict due to different spring dependencies.
+   Spring Boot is used to create REST APIs and packaging of the application as a fat jar. This is helpful as it is a self-   contained application including an Embedded Jetty server which can be used to start the application without the need of an external server.
+Also, Spring Boot helps in easier management of dependencies. Spring Boot provides a lot of starter dependencies which downloads all the related dependencies with just one entry in pom.xml.
 2. JSOUP:
    Jsoup library is used to parse an HTML file to get the redirected URL for getting Content Data JSON
 3. Commons Lang3and Collection4:
